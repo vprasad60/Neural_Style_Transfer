@@ -3,9 +3,10 @@ This repository presents an implementation of the Neural Style Transfer (NST) al
 
 ## Code Overview and Demonstration
 ### Designating Images
-To run this code, add a content image to the Content_Images folder and a style image to the Style_Images folder. As an example, we will use 'mount_rushmore' as our content image and 'starry_night' as our style image. 
+To run this code, add a content image to the Content_Images folder and a style image to the Style_Images folder. 
 
 ### Running the Code
+The code snippet below indicates the parameters that can be changed in the notebook file. These are the default parameters used to generate the images located in the 'Generated_Images' folder. It is important to change the content and style image strings based on which images are desired for NST. 
 
 ```python
 # Establish variables
@@ -22,7 +23,7 @@ style_layers = ['0','5','10','19','28']
 style_weights = [0.2, 0.2, 0.2, 0.2, 0.2]
 ```
 
-After running the algorithm you will see a progress bar as the iterations are completed. 
+After running the algorithm you will see a progress bar as the iterations are completed. The saved image will appear in the 'Generated_Images' folder.
 
 
 ## References

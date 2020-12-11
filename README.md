@@ -6,7 +6,7 @@ This repository presents an implementation of the Neural Style Transfer (NST) al
 To run this code, first add a content image to the Content_Images folder and a style image to the Style_Images folder. For this example, we will use a content image of [Mount Rushmore](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Content_Images/mount_rushmore.jpg) and a style image of [*Starry Night*](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Style_Images/blam.jpg) by Vincent Van Gogh.
 
 ### Running the Code
-The code snippet below indicates the parameters that can be changed in the notebook file. These are the default parameters used to generate the images located in the 'Generated_Images' folder. It is important to change the content and style image strings based on which images are desired for NST. Selecting 'content' and the input image tends to lead to the best results. 
+The code snippet below indicates the parameters that can be changed in the notebook file. These are the default parameters used to generate the images located in the 'Generated_Images' folder. It is important to change the content and style image strings based on which images are desired for NST. Selecting 'content' as the input image tends to lead to the best results. 
 
 ```python
 # Establish variables

@@ -3,9 +3,12 @@ This repository presents an implementation of the Neural Style Transfer (NST) al
 
 ## Code Overview and Demonstration
 ### Designating Images
-To run this code, first add a content image to the Content_Images folder and a style image to the Style_Images folder. For this example, we will use a content image of [Mount Rushmore](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Content_Images/mount_rushmore.jpg) and a style image of [*Starry Night*](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Style_Images/blam.jpg) by Vincent Van Gogh.
+To run this code, first add a content image to the Content_Images folder and a style image to the Style_Images folder. *Note*: Make sure your images are in a jpg format. 
+
+For this example, we will use a content image of [Mount Rushmore](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Content_Images/mount_rushmore.jpg) and a style image of [*Starry Night*](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Style_Images/blam.jpg) by Vincent Van Gogh.
 
 ### Running the Code
+#### Jupyter Notebook
 The code snippet below indicates the parameters that can be changed in the notebook file. These are the default parameters used to generate the images located in the 'Generated_Images' folder. It is important to change the content and style image strings based on which images are desired for NST. Selecting 'content' as the input image tends to lead to the best results. 
 
 ```python
@@ -22,8 +25,25 @@ content_layers = ['21']
 style_layers = ['0','5','10','19','28']
 style_weights = [0.2, 0.2, 0.2, 0.2, 0.2]
 ```
+When the final cell is run to perform the style transfer, you will see a progress bar as the iterations are completed. The saved image will appear in the 'Generated_Images' folder. 
 
-When the final cell is run to perform the style transfer, you will see a progress bar as the iterations are completed. The saved image will appear in the 'Generated_Images' folder. Below is the final result of transferring the art style of *Starry Night* to a content image of Mount Rushmore. Other examples are shown in the 'Generated_Images' folder. 
+#### Command Line
+Using the command line will be much more straightforward for running the NST algorithm. You will just need to input the name of content and style images for the appropriate prompts. All other parameters such as alpha, beta, and img_size, have been set to their respective default values shown above. These can also be changed in the command line. Example command arguments are shown below. 
+
+##### Sample Run with Default Hyperparameters
+```
+python nst.py --content_image mount_rushmore --style_image starry_night
+```
+
+##### Sample Run with Adjustment of Hyperparameters
+```
+python nst.py --content_image mount_rushmore --style_image starry_night --iters 20 --alpha 100 --beta 1e3
+```
+
+You will see a progress bar as the iterations are completed. The saved image will appear in the 'Generated_Images' folder.
+
+### Results
+Below is the final result of transferring the art style of *Starry Night* to a content image of Mount Rushmore. Other examples are shown in the 'Generated_Images' folder. 
 
 ![Image](https://github.com/vprasad60/Neural_Style_Transfer/blob/main/Generated_Images/mount_rushmore/mount_rushmore_starry_night.jpg)
 

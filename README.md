@@ -37,7 +37,7 @@ python nst.py --content_image mount_rushmore --style_image starry_night
 
 ##### Sample Run with Adjustment of Hyperparameters
 ```
-python nst.py --content_image mount_rushmore --style_image starry_night --iters 20 --alpha 100 --beta 1e3
+python nst.py --content_image mount_rushmore --style_image starry_night --iters 20 --alpha 100
 ```
 
 You will see a progress bar as the iterations are completed. The saved image will appear in the 'Generated_Images' folder.
